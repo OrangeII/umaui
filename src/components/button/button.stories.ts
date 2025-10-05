@@ -8,7 +8,6 @@ import Button from "./button.vue";
 const meta = {
   title: "Components/Button",
   component: Button,
-  // This component will have an automatically generated docsPage entry: https://storybook.js.org/docs/writing-docs/autodocs
   tags: ["autodocs"],
   argTypes: {},
   args: {},
@@ -24,11 +23,40 @@ type Story = StoryObj<typeof meta>;
 export const Primary: Story = {
   args: {
     primary: true,
+    label: "Next",
   },
 };
 
 export const Neutral: Story = {
   args: {
     primary: false,
+    label: "Cancel",
   },
+};
+
+export const small: Story = {
+  args: {
+    label: "Details",
+    small: true,
+  },
+};
+
+export const withIcon: Story = {
+  args: {
+    primary: false,
+    label: "Purchase Charats",
+  },
+  render: (args) => ({
+    components: { Button },
+    setup() {
+      return { args };
+    },
+    template: `
+      <Button ...="args" @click="onClick">
+        <template #icon>
+          <div style="font-size: 60px">🥕</div>
+        </template>
+      </Button>
+    `,
+  }),
 };

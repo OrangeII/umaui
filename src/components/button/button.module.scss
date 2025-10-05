@@ -36,6 +36,10 @@
   position: relative;
   transition: transform 0.15s;
 
+  &:active {
+    transform: scale(0.9);
+  }
+
   .inner-border {
     position: absolute;
     top: 0px;
@@ -57,44 +61,89 @@
     right: 0px;
     z-index: 5;
     width: min(70%, 96px);
+
+    .decoration-front {
+      position: absolute;
+      z-index: 1;
+      width: 120px;
+      height: 72px;
+      left: 0px;
+      top: 0px;
+      bottom: 0px;
+
+      background: linear-gradient(
+        174deg,
+        var(--decoration-gradient-start) 5.05%,
+        var(--decoration-gradient-end) 63.54%
+      );
+      transform: translateY(10px) rotate(-48.43deg);
+    }
+
+    .decoration-back {
+      position: absolute;
+      z-index: 0;
+
+      width: 115px;
+      height: 72px;
+      left: 0px;
+      top: 0px;
+      bottom: 0px;
+
+      background: linear-gradient(
+        135.38deg,
+        var(--decoration-gradient-start) 30.1%,
+        var(--decoration-gradient-end) 56.62%
+      );
+      transform: translate(-5px, -27px) rotate(-122deg);
+    }
   }
 
-  .decoration-front {
-    position: absolute;
-    z-index: 1;
-    width: 120px;
-    height: 72px;
-    left: 0px;
-    top: 0px;
-    bottom: 0px;
+  .content {
+    color: var(--text-color);
+    font-size: 22px;
+    font-weight: 600;
 
-    background: linear-gradient(
-      174deg,
-      var(--decoration-gradient-start) 5.05%,
-      var(--decoration-gradient-end) 63.54%
-    );
-    transform: translateY(10px) rotate(-48.43deg);
+    position: relative;
+    z-index: 10;
+    height: calc(100% - 2px);
+    width: calc(100% - 2px);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 18px;
+
+    > * {
+      flex-grow: 1;
+    }
   }
 
-  .decoration-back {
-    position: absolute;
-    z-index: 0;
+  .icon {
+    width: max(46px, 20%);
+    height: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
 
-    width: 115px;
-    height: 72px;
-    left: 0px;
-    top: 0px;
-    bottom: 0px;
-
-    background: linear-gradient(
-      135.38deg,
-      var(--decoration-gradient-start) 30.1%,
-      var(--decoration-gradient-end) 56.62%
-    );
-    transform: translate(-5px, -27px) rotate(-122deg);
+    filter: drop-shadow(0px 4px 1px rgba(0, 0, 0, 0.23));
   }
 }
 
-.button:active {
-  transform: scale(0.9);
+.small {
+  width: 78px;
+  height: 36px;
+  border-radius: 18px;
+
+  .decoration {
+    border-radius: 16px;
+  }
+
+  .inner-border {
+    border-radius: 16px;
+  }
+
+  .content {
+    font-size: 16px;
+    font-weight: 600;
+  }
 }
