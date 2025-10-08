@@ -13,6 +13,7 @@
       <span>
         {{ props.label }}
       </span>
+      test
     </span>
     <span :class="styles.decoration">
       <span :class="styles['decoration-front']"></span>

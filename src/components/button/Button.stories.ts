@@ -11,6 +11,8 @@ const meta = {
   args: {},
 } satisfies Meta<typeof Button>;
 
+const t = 0;
+
 export default meta;
 type Story = StoryObj<typeof meta>;
 /*
