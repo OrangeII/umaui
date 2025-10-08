@@ -19,14 +19,12 @@
 }
 
 .button {
-  cursor: pointer;
+  height: 4rem;
+  width: 15.312rem;
 
-  height: 64px;
-  width: 245px;
-
-  border: 2px solid var(--border);
-  box-shadow: 0px 4px 1px -1px rgba(102, 100, 112, 0.56);
-  border-radius: 11px;
+  border: 0.125rem solid var(--border);
+  box-shadow: 0px 0.25rem 0.063rem -0.063rem rgba(102, 100, 112, 0.56);
+  border-radius: 0.688rem;
   background: linear-gradient(
     180deg,
     var(--bg-gradient-start) 0%,
@@ -46,27 +44,27 @@
     bottom: 0px;
     left: 0px;
     right: 0px;
-    border: 2px solid var(--inner-border);
-    border-radius: 10px;
+    border: 0.125rem solid var(--inner-border);
+    border-radius: 0.625rem;
     z-index: 6;
     opacity: 80%;
   }
 
   .decoration {
-    border-radius: 10px;
+    border-radius: 0.625rem;
     overflow: hidden;
     position: absolute;
     top: 0px;
     bottom: 0px;
     right: 0px;
     z-index: 5;
-    width: min(70%, 96px);
+    width: min(70%, 6rem);
 
     .decoration-front {
       position: absolute;
       z-index: 1;
-      width: 120px;
-      height: 72px;
+      width: 7.5rem;
+      height: 4.5rem;
       left: 0px;
       top: 0px;
       bottom: 0px;
@@ -76,15 +74,15 @@
         var(--decoration-gradient-start) 5.05%,
         var(--decoration-gradient-end) 63.54%
       );
-      transform: translateY(10px) rotate(-48.43deg);
+      transform: translateY(0.625rem) rotate(-48.43deg);
     }
 
     .decoration-back {
       position: absolute;
       z-index: 0;
 
-      width: 115px;
-      height: 72px;
+      width: 7.188rem;
+      height: 4.5rem;
       left: 0px;
       top: 0px;
       bottom: 0px;
@@ -94,24 +92,24 @@
         var(--decoration-gradient-start) 30.1%,
         var(--decoration-gradient-end) 56.62%
       );
-      transform: translate(-5px, -27px) rotate(-122deg);
+      transform: translate(-0.313rem, -1.688rem) rotate(-122deg);
     }
   }
 
   .content {
     color: var(--text-color);
-    font-size: 22px;
+    font-size: 1.375rem;
     font-weight: 600;
 
     position: relative;
     z-index: 10;
-    height: calc(100% - 2px);
-    width: calc(100% - 2px);
+    height: calc(100% - 0.125rem);
+    width: calc(100% - 0.125rem);
 
     display: flex;
     justify-content: center;
     align-items: center;
-    gap: 18px;
+    gap: 1.125rem;
 
     > * {
       flex-grow: 1;
@@ -119,31 +117,31 @@
   }
 
   .icon {
-    width: max(46px, 20%);
+    width: max(2.875rem, 20%);
     height: 100%;
     display: flex;
     justify-content: flex-start;
     align-items: center;
 
-    filter: drop-shadow(0px 4px 1px rgba(0, 0, 0, 0.23));
+    filter: drop-shadow(0px 0.25rem 0.063rem rgba(0, 0, 0, 0.23));
   }
 }
 
 .small {
-  width: 78px;
-  height: 36px;
-  border-radius: 18px;
+  width: 4.875rem;
+  height: 2.25rem;
+  border-radius: 1.125rem;
 
   .decoration {
-    border-radius: 16px;
+    border-radius: 1rem;
   }
 
   .inner-border {
-    border-radius: 16px;
+    border-radius: 1rem;
   }
 
   .content {
-    font-size: 16px;
+    font-size: 1rem;
     font-weight: 600;
   }
 }
