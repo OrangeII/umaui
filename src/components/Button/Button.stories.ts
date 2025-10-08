@@ -18,6 +18,13 @@ type Story = StoryObj<typeof meta>;
  * See https://storybook.js.org/docs/api/csf
  * to learn how to use render functions.
  */
+
+export const Neutral: Story = {
+  args: {
+    label: "Cancel",
+  },
+};
+
 export const Primary: Story = {
   args: {
     primary: true,
@@ -25,10 +32,20 @@ export const Primary: Story = {
   },
 };
 
-export const Neutral: Story = {
+export const medium: Story = {
   args: {
-    primary: false,
-    label: "Cancel",
+    label: "Exchange",
+    primary: true,
+    medium: true,
+  },
+};
+
+export const disabled: Story = {
+  args: {
+    label: "Exchange",
+    primary: true,
+    medium: true,
+    disabled: true,
   },
 };
 
@@ -41,7 +58,6 @@ export const small: Story = {
 
 export const withIcon: Story = {
   args: {
-    primary: false,
     label: "Purchase Carats",
   },
   render: (args) => ({
@@ -51,26 +67,6 @@ export const withIcon: Story = {
     },
     template: `
       <Button ...="args">
-        <template #icon>
-          <div style="font-size: 3.75rem">🥕</div>
-        </template>
-      </Button>
-    `,
-  }),
-};
-
-export const Disabled: Story = {
-  args: {
-    label: "Purchase Carats",
-    disabled: true,
-  },
-  render: (args) => ({
-    components: { Button },
-    setup() {
-      return { args };
-    },
-    template: `
-      <Button ...="args" disabled>
         <template #icon>
           <div style="font-size: 3.75rem">🥕</div>
         </template>

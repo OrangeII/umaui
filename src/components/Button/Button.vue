@@ -3,6 +3,7 @@
     :class="[
       styles.button,
       props.primary ? styles.primary : null,
+      props.medium ? styles.medium : null,
       props.small ? styles.small : null,
     ]"
     @click="onClick"
@@ -50,6 +51,7 @@ const showDecoration = ref<boolean>(false);
 interface ButtonProps {
   primary?: boolean;
   small?: boolean;
+  medium?: boolean;
   label?: string;
   suppressClickDecoration?: boolean;
   disabled?: boolean;

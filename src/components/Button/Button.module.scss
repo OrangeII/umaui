@@ -46,7 +46,7 @@ button {
   position: relative;
   transition: none;
 
-  &:active {
+  &:enabled:active {
     transform: scale(0.9);
     transition: transform 0.15s;
   }
@@ -196,6 +196,25 @@ button {
 
   .inner-border {
     border-radius: 1rem;
+  }
+
+  .content {
+    font-size: 1rem;
+    font-weight: 600;
+  }
+}
+
+.medium {
+  width: 5.875rem;
+  height: 3.189rem;
+  border-radius: 0.875rem;
+
+  .decoration {
+    border-radius: 1rem;
+  }
+
+  .inner-border {
+    border-radius: 0.712rem;
   }
 
   .content {
