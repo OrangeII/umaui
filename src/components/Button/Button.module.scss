@@ -147,22 +147,25 @@ button {
   position: absolute;
   top: 0;
   left: 0;
-  display: flex;
-  justify-content: space-between;
   width: 100%;
 
   .content {
     height: 3rem;
     width: 3.25rem;
-    opacity: 0;
+    opacity: 1;
   }
 
   .left {
-    transform: translate(-1.6rem, -1.6rem);
+    position: absolute;
+    top: -1.6rem;
+    left: -1.6rem;
   }
 
   .right {
-    transform: translate(1.6rem, -1.6rem) scaleX(-1);
+    position: absolute;
+    top: -1.6rem;
+    right: -1.6rem;
+    transform: scaleX(-1);
   }
 }
 
