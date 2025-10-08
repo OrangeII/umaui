@@ -19,11 +19,15 @@
       <span :class="styles['decoration-back']"></span>
     </span>
     <span :class="styles['inner-border']"></span>
+    <div>
+      <ClickDecoration />
+    </div>
   </button>
 </template>
 
 <script setup lang="ts">
 import styles from "./Button.module.scss";
+import ClickDecoration from "./ButtonClickDecoration.vue";
 
 interface ButtonProps {
   primary?: boolean;

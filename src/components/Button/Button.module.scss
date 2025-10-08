@@ -1,11 +1,15 @@
+button {
+  font-size: 1rem;
+}
+
 .neutral {
   --text-color: #794016;
   --border: #635d7e;
   --inner-border: #f7f3f7;
   --bg-gradient-start: #ffffff;
   --bg-gradient-end: #e3e1e8;
-  --decoration-gradient-start: #e4e3e7;
-  --decoration-gradient-end: #ffffff;
+  --deco-gradient-start: #e4e3e7;
+  --deco-gradient-end: #ffffff;
 }
 
 .primary {
@@ -14,8 +18,13 @@
   --inner-border: #b4ef18;
   --bg-gradient-start: #a5e005;
   --bg-gradient-end: #60bd0d;
-  --decoration-gradient-start: #63b500;
-  --decoration-gradient-end: #a2df05;
+  --deco-gradient-start: #63b500;
+  --deco-gradient-end: #a2df05;
+
+  --click-decoration-primary: #ffee31;
+  --click-decoration-secondary: #fcdc29;
+  --click-decoration-stroke-color: #9e3700;
+  --click-decoration-stroke-opacity: 0.29;
 }
 
 .button {
@@ -71,8 +80,8 @@
 
       background: linear-gradient(
         174deg,
-        var(--decoration-gradient-start) 5.05%,
-        var(--decoration-gradient-end) 63.54%
+        var(--deco-gradient-start) 5.05%,
+        var(--deco-gradient-end) 63.54%
       );
       transform: translateY(0.625rem) rotate(-48.43deg);
     }
@@ -89,8 +98,8 @@
 
       background: linear-gradient(
         135.38deg,
-        var(--decoration-gradient-start) 30.1%,
-        var(--decoration-gradient-end) 56.62%
+        var(--deco-gradient-start) 30.1%,
+        var(--deco-gradient-end) 56.62%
       );
       transform: translate(-0.313rem, -1.688rem) rotate(-122deg);
     }
@@ -144,4 +153,10 @@
     font-size: 1rem;
     font-weight: 600;
   }
+}
+
+.click-decoration {
+  z-index: 99;
+  height: 3rem;
+  width: 3.25rem;
 }
