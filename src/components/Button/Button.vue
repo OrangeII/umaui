@@ -5,7 +5,7 @@
       props.primary ? styles.primary : styles.neutral,
       props.small ? styles.small : null,
     ]"
-    @click="showDecoration = true"
+    @click="onClick"
   >
     <span :class="styles.content">
       <span v-if="$slots.icon" :class="styles.icon">
@@ -21,7 +21,10 @@
     </span>
     <span :class="styles['inner-border']"></span>
 
-    <span :class="styles['click-decoration']">
+    <span
+      v-if="!props.suppressClickDecoration"
+      :class="styles['click-decoration']"
+    >
       <span :class="styles['left']">
         <transition name="pop-in" @after-enter="showDecoration = false">
           <ClickDecoration v-if="showDecoration" />
@@ -47,12 +50,20 @@ interface ButtonProps {
   primary?: boolean;
   small?: boolean;
   label?: string;
+  suppressClickDecoration?: boolean;
 }
 const props = withDefaults(defineProps<ButtonProps>(), {
   primary: false,
   small: false,
   label: "",
+  suppressClickDecoration: false,
 });
+
+function onClick() {
+  if (!props.suppressClickDecoration) {
+    showDecoration.value = true;
+  }
+}
 </script>
 
 <style scoped>
