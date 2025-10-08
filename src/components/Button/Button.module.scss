@@ -41,10 +41,11 @@ button {
   );
 
   position: relative;
-  transition: transform 0.15s;
+  transition: none;
 
   &:active {
     transform: scale(0.9);
+    transition: transform 0.15s;
   }
 
   .inner-border {
@@ -148,14 +149,15 @@ button {
   .content {
     height: 3rem;
     width: 3.25rem;
+    opacity: 0;
   }
 
   .left {
-    transform: translate(-1.2rem, -1.2rem);
+    transform: translate(-1.6rem, -1.6rem);
   }
 
   .right {
-    transform: translate(1.2rem, -1.2rem) scaleX(-1);
+    transform: translate(1.6rem, -1.6rem) scaleX(-1);
   }
 }
 

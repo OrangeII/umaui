@@ -5,7 +5,7 @@
       props.primary ? styles.primary : styles.neutral,
       props.small ? styles.small : null,
     ]"
-    @click="showClickAnimation"
+    @click="showDecoration = true"
   >
     <span :class="styles.content">
       <span v-if="$slots.icon" :class="styles.icon">
@@ -22,14 +22,11 @@
     <span :class="styles['inner-border']"></span>
 
     <span :class="styles['click-decoration']">
-      <!-- left decoration -->
       <span :class="styles['left']">
         <transition name="pop-in" @after-enter="showDecoration = false">
           <ClickDecoration v-if="showDecoration" />
         </transition>
       </span>
-
-      <!-- right decoration flipped -->
       <span :class="styles['right']">
         <transition name="pop-in" @after-enter="showDecoration = false">
           <ClickDecoration v-if="showDecoration" />
@@ -56,12 +53,6 @@ const props = withDefaults(defineProps<ButtonProps>(), {
   small: false,
   label: "",
 });
-
-const showClickAnimation = () => {
-  setTimeout(() => {
-    showDecoration.value = true;
-  }, 100);
-};
 </script>
 
 <style scoped>
@@ -75,19 +66,15 @@ const showClickAnimation = () => {
     transform: translateY(0) scale(0.6);
     opacity: 1;
   }
-  30% {
-    animation-timing-function: cubic-bezier(0.33333, 0, 0.66667, 0.33333);
-    transform: translate(-1rem, -1rem) scale(1);
-    opacity: 1;
-  }
+  17%,
   50% {
     animation-timing-function: cubic-bezier(0.33333, 0, 0.66667, 0.33333);
-    transform: translate(-1rem, -1rem) scale(1);
+    transform: translate(-1rem, -1.2rem) scale(1);
     opacity: 1;
   }
   100% {
-    transform: translate(-0rem, -0rem) scale(0.4);
-    opacity: 0;
+    transform: translate(-0rem, -0rem) scale(0.9);
+    opacity: 1;
   }
 }
 </style>
