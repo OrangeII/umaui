@@ -20,6 +20,7 @@ export default defineConfig({
     vue(),
     dts({
       tsconfigPath: "./tsconfig.app.json",
+      exclude: ["**/*.stories.ts"],
     }),
     libInjectCss(),
   ],

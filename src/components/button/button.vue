@@ -7,7 +7,7 @@
     ]"
   >
     <span :class="styles.content">
-      <span v-if="slots.icon" :class="styles.icon">
+      <span v-if="$slots.icon" :class="styles.icon">
         <slot name="icon"></slot>
       </span>
       <span>
@@ -23,7 +23,7 @@
 </template>
 
 <script setup lang="ts">
-import styles from "./button.module.scss";
+import styles from "./Button.module.scss";
 
 interface ButtonProps {
   primary?: boolean;
@@ -35,8 +35,4 @@ const props = withDefaults(defineProps<ButtonProps>(), {
   small: false,
   label: "",
 });
-
-const slots = defineSlots<{
-  icon: () => any;
-}>();
 </script>
