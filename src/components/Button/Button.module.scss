@@ -136,6 +136,29 @@ button {
   }
 }
 
+.click-decoration {
+  z-index: 999;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+
+  .content {
+    height: 3rem;
+    width: 3.25rem;
+  }
+
+  .left {
+    transform: translate(-1.2rem, -1.2rem);
+  }
+
+  .right {
+    transform: translate(1.2rem, -1.2rem) scaleX(-1);
+  }
+}
+
 .small {
   width: 4.875rem;
   height: 2.25rem;
@@ -152,34 +175,5 @@ button {
   .content {
     font-size: 1rem;
     font-weight: 600;
-  }
-}
-
-.click-decoration {
-  z-index: 999;
-  height: 3rem;
-  width: 3.25rem;
-  animation: sparkle 0.5s linear 1;
-
-  @keyframes sparkle {
-    0% {
-      animation-timing-function: cubic-bezier(0.33333, 0.66667, 0.66667, 1);
-      transform: translateY(0) scale(0.8);
-      opacity: 1;
-    }
-    30% {
-      animation-timing-function: cubic-bezier(0.33333, 0, 0.66667, 0.33333);
-      transform: translate(-1rem, -1rem) scale(1.2);
-      opacity: 1;
-    }
-    50% {
-      animation-timing-function: cubic-bezier(0.33333, 0, 0.66667, 0.33333);
-      transform: translate(-1rem, -1rem) scale(1.2);
-      opacity: 1;
-    }
-    100% {
-      transform: translate(-0rem, -0rem) scale(0.4);
-      opacity: 0;
-    }
   }
 }

@@ -1,6 +1,6 @@
 <template>
   <svg
-    :class="styles['click-decoration']"
+    :class="styles['content']"
     xmlns="http://www.w3.org/2000/svg"
     viewBox="0 0 48 52"
     fill="none"
