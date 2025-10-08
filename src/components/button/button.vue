@@ -6,21 +6,19 @@
       props.small ? styles.small : null,
     ]"
   >
-    <div :class="styles.content">
-      <slot name="content">
-        <div v-if="slots.icon" :class="styles.icon">
-          <slot name="icon"></slot>
-        </div>
-        <div>
-          {{ props.label }}
-        </div>
-      </slot>
-    </div>
-    <div :class="styles.decoration">
-      <div :class="styles['decoration-front']"></div>
-      <div :class="styles['decoration-back']"></div>
-    </div>
-    <div :class="styles['inner-border']"></div>
+    <span :class="styles.content">
+      <span v-if="slots.icon" :class="styles.icon">
+        <slot name="icon"></slot>
+      </span>
+      <span>
+        {{ props.label }}
+      </span>
+    </span>
+    <span :class="styles.decoration">
+      <span :class="styles['decoration-front']"></span>
+      <span :class="styles['decoration-back']"></span>
+    </span>
+    <span :class="styles['inner-border']"></span>
   </button>
 </template>
 
@@ -39,8 +37,6 @@ const props = withDefaults(defineProps<ButtonProps>(), {
 });
 
 const slots = defineSlots<{
-  content: () => any;
   icon: () => any;
-  label: () => any;
 }>();
 </script>

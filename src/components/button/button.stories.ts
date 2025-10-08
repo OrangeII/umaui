@@ -1,7 +1,5 @@
 import type { Meta, StoryObj } from "@storybook/vue3-vite";
 
-import { fn } from "storybook/test";
-
 import Button from "./button.vue";
 
 // More on how to set up stories at: https://storybook.js.org/docs/writing-stories
@@ -54,7 +52,7 @@ export const withIcon: Story = {
     template: `
       <Button ...="args" @click="onClick">
         <template #icon>
-          <div style="font-size: 60px">🥕</div>
+          <div style="font-size: 3.75rem">🥕</div>
         </template>
       </Button>
     `,
