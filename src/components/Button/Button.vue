@@ -2,7 +2,7 @@
   <button
     :class="[
       styles.button,
-      props.primary ? styles.primary : styles.neutral,
+      props.primary ? styles.primary : null,
       props.small ? styles.small : null,
     ]"
     @click="onClick"
