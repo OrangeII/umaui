@@ -19,9 +19,7 @@
       <span :class="styles['decoration-back']"></span>
     </span>
     <span :class="styles['inner-border']"></span>
-    <div>
-      <ClickDecoration />
-    </div>
+    <ClickDecoration />
   </button>
 </template>
 
