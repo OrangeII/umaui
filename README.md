@@ -1,3 +1,9 @@
 # Umaui 🐎
 
-Vue libary to that replicates the UI/UX from the popular videogame "Umamusume: Pretty Derby"
+Vue libary to replicate UI from the popular videogame "Umamusume: Pretty Derby"
+
+## Components
+
+- [x] Button
+- [ ] DialogChoice
+- [ ] Card
