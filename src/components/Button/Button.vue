@@ -6,6 +6,7 @@
       props.small ? styles.small : null,
     ]"
     @click="onClick"
+    :disabled="props.disabled"
   >
     <span :class="styles.content">
       <span v-if="$slots.icon" :class="styles.icon">
@@ -51,6 +52,7 @@ interface ButtonProps {
   small?: boolean;
   label?: string;
   suppressClickDecoration?: boolean;
+  disabled?: boolean;
 }
 const props = withDefaults(defineProps<ButtonProps>(), {
   primary: false,

@@ -42,7 +42,7 @@ export const small: Story = {
 export const withIcon: Story = {
   args: {
     primary: false,
-    label: "Purchase Charats",
+    label: "Purchase Carats",
   },
   render: (args) => ({
     components: { Button },
@@ -50,7 +50,27 @@ export const withIcon: Story = {
       return { args };
     },
     template: `
-      <Button ...="args" @click="onClick">
+      <Button ...="args">
+        <template #icon>
+          <div style="font-size: 3.75rem">🥕</div>
+        </template>
+      </Button>
+    `,
+  }),
+};
+
+export const Disabled: Story = {
+  args: {
+    label: "Purchase Carats",
+    disabled: true,
+  },
+  render: (args) => ({
+    components: { Button },
+    setup() {
+      return { args };
+    },
+    template: `
+      <Button ...="args" disabled>
         <template #icon>
           <div style="font-size: 3.75rem">🥕</div>
         </template>
