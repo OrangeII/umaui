@@ -12,11 +12,10 @@ Vue libary to replicate UI from the popular videogame "Umamusume: Pretty Derby"
   - [x] With icon
   - [ ] Round
   - [ ] Back
-- [ ] DialogChoice
+- [x] DialogChoice
   - [x] green
   - [x] yellow
   - [x] pink
-  - [ ] Click decoration
 - [ ] Card
 - [ ] SpeechBubble
 - [ ] Tabs

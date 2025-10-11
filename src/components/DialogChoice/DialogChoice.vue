@@ -1,5 +1,8 @@
 <template>
-  <button :class="[styles['uma-dialog-choice'], styles[props.color]]">
+  <button
+    :class="[styles['uma-dialog-choice'], styles[props.color]]"
+    @click="triggerDecoration"
+  >
     <span :class="styles.overlay"></span>
     <span :class="styles.inner">
       <svg
@@ -29,11 +32,19 @@
         </span>
       </span>
     </span>
+
+    <span>
+      <ButtonClickDecoration v-model="showDecoration" :primary="true" />
+    </span>
   </button>
 </template>
 
 <script setup lang="ts">
 import styles from "./DialogChoice.module.scss";
+import ButtonClickDecoration from "../ButtonClickDecoration/ButtonClickDecoration.vue";
+import { useButtonClickDecoration } from "../ButtonClickDecoration/useButtonClickDecoration";
+
+const { showDecoration, triggerDecoration } = useButtonClickDecoration();
 
 interface DialogChoiceProps {
   color?: "green" | "yellow" | "pink";
