@@ -1,7 +1,7 @@
 <template>
   <button :class="[styles['uma-dialog-choice'], styles[props.color]]">
-    <div :class="styles.overlay"></div>
-    <div :class="styles.inner">
+    <span :class="styles.overlay"></span>
+    <span :class="styles.inner">
       <svg
         width="25"
         :class="styles.icon"
@@ -14,21 +14,21 @@
         />
       </svg>
 
-      <div :class="styles.text">
+      <span :class="styles.text">
         <slot>
           {{ props.label }}
         </slot>
-      </div>
+      </span>
 
-      <div :class="styles.decoration">
-        <div :class="styles['decoration-front']">
-          <div></div>
-        </div>
-        <div :class="styles['decoration-back']">
-          <div></div>
-        </div>
-      </div>
-    </div>
+      <span :class="styles.decoration">
+        <span :class="styles['decoration-front']">
+          <span></span>
+        </span>
+        <span :class="styles['decoration-back']">
+          <span></span>
+        </span>
+      </span>
+    </span>
   </button>
 </template>
 

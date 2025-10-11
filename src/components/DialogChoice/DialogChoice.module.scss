@@ -85,6 +85,10 @@
     border-top-right-radius: 7px;
     border-bottom-right-radius: 7px;
 
+    span {
+      display: block;
+    }
+
     > * {
       position: absolute;
     }
