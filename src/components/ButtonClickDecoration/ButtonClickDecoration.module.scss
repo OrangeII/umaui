@@ -1,0 +1,40 @@
+.neutral {
+  --click-decoration-primary: #fbf4ec;
+  --click-decoration-secondary: #e7dfd8;
+  --click-decoration-stroke-color: #695d48;
+  --click-decoration-stroke-opacity: 0.33;
+}
+
+.primary {
+  --click-decoration-primary: #ffee31;
+  --click-decoration-secondary: #fcdc29;
+  --click-decoration-stroke-color: #9e3700;
+  --click-decoration-stroke-opacity: 0.29;
+}
+
+.click-decoration {
+  z-index: 999;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+
+  .content {
+    height: 3rem;
+    width: 3.25rem;
+    opacity: 0;
+  }
+
+  .left {
+    position: absolute;
+    top: -1.6rem;
+    left: -1.6rem;
+  }
+
+  .right {
+    position: absolute;
+    top: -1.6rem;
+    right: -1.6rem;
+    transform: scaleX(-1);
+  }
+}

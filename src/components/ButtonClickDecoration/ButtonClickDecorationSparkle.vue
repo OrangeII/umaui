@@ -62,5 +62,5 @@
 </template>
 
 <script setup lang="ts">
-import styles from "./Button.module.scss";
+import styles from "./ButtonClickDecoration.module.scss";
 </script>
