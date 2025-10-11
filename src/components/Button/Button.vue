@@ -14,7 +14,10 @@
         <slot name="icon"></slot>
       </span>
       <span>
-        {{ props.label }}
+        <slot>
+          <!-- Default label if none is provided -->
+          {{ props.label }}
+        </slot>
       </span>
     </span>
     <span :class="styles.decoration">
