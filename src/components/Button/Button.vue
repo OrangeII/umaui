@@ -72,7 +72,7 @@ function onClick() {
 
 <style scoped>
 .pop-in-enter-active {
-  animation: pop-in 0.3s linear 1;
+  animation: pop-in 0.25s linear 1;
 }
 
 @keyframes pop-in {
@@ -81,14 +81,14 @@ function onClick() {
     transform: translateY(0) scale(0.6);
     opacity: 1;
   }
-  17%,
+  20%,
   50% {
     animation-timing-function: cubic-bezier(0.33333, 0, 0.66667, 0.33333);
     transform: translate(-1rem, -1.2rem) scale(1);
     opacity: 1;
   }
   100% {
-    transform: translate(-0rem, -0rem) scale(0.9);
+    transform: translate(-0.8rem, -0rem) scale(0.9);
     opacity: 1;
   }
 }
