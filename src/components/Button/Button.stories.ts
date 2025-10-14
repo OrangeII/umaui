@@ -56,21 +56,29 @@ export const small: Story = {
   },
 };
 
+const withIconTemplate = `
+    <Button label="Purchase Carats">
+      <template #icon>
+        <div style="font-size: 3.75rem">🥕</div>
+      </template>
+    </Button>
+  `;
 export const withIcon: Story = {
   args: {
     label: "Purchase Carats",
+  },
+  parameters: {
+    docs: {
+      source: {
+        code: withIconTemplate,
+      },
+    },
   },
   render: (args) => ({
     components: { Button },
     setup() {
       return { args };
     },
-    template: `
-      <Button ...="args">
-        <template #icon>
-          <div style="font-size: 3.75rem">🥕</div>
-        </template>
-      </Button>
-    `,
+    template: withIconTemplate,
   }),
 };
