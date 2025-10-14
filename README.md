@@ -21,7 +21,7 @@ Vue libary to replicate UI from the popular videogame "Umamusume: Pretty Derby"
 - [ ] Tabs
 - [ ] Checkbox
 - [ ] RadioButton
-- [ ] Table
+- [x] Table
 - [ ] Badge
   - [ ] New
   - [ ] Exclamation
