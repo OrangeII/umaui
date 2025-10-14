@@ -19,10 +19,10 @@
 .uma-dialog-choice {
   position: relative;
 
-  height: 83px;
+  height: 82.848px;
   width: 568px;
 
-  font-size: 19px;
+  font-size: 19.008px;
   font-weight: 600;
   color: #794016;
   background-color: #fff;
@@ -32,7 +32,7 @@
   border-color: var(--normal);
   border-radius: 10px;
 
-  padding: 0px 0px;
+  padding: 0rem 0px;
 
   display: grid;
   grid-template-columns: 1fr;
@@ -40,7 +40,7 @@
 
   > .overlay {
     position: absolute;
-    height: 0px;
+    height: 0rem;
     background-color: var(--normal);
     opacity: 0.3;
     z-index: 12;
@@ -50,7 +50,7 @@
     transform: scale(0.9);
 
     > .overlay {
-      border-radius: 8px;
+      border-radius: 0.5rem;
       height: 100%;
       width: 100%;
     }
@@ -58,34 +58,34 @@
 
   > .inner {
     border-style: solid;
-    border-width: 2px;
+    border-width: 0.125rem;
     border-color: #fff;
-    border-radius: 8px;
+    border-radius: 0.5rem;
 
     display: grid;
-    grid-template-columns: 51px 1fr 82px;
+    grid-template-columns: 3.188rem 1fr 5.125rem;
     grid-template-rows: 1fr;
   }
 
   .text {
     z-index: 15;
-    text-shadow: 0 0 3px #fff, 0 0 3px #fff, 0 0 3px #fff, 0 0 3px #fff,
-      0 0 3px #fff, 0 0 3px #fff, 0 0 3px #fff;
+    text-shadow: 0 0 0.188rem #fff, 0 0 0.188rem #fff, 0 0 0.188rem #fff,
+      0 0 0.188rem #fff, 0 0 0.188rem #fff, 0 0 0.188rem #fff, 0 0 0.188rem #fff;
     text-align: left;
     align-self: center;
   }
 
   .icon {
-    margin-left: 8px;
-    margin-right: 18px;
+    margin-left: 0.5rem;
+    margin-right: 1.125rem;
     align-self: center;
     fill: var(--normal);
   }
   .decoration {
     overflow: hidden;
     transform: translateY(0);
-    border-top-right-radius: 7px;
-    border-bottom-right-radius: 7px;
+    border-top-right-radius: 0.438rem;
+    border-bottom-right-radius: 0.438rem;
 
     span {
       display: block;
@@ -102,10 +102,10 @@
       > * {
         background-color: var(--light);
         height: 1000%;
-        width: 100px;
+        width: 6.25rem;
         z-index: 10;
         transform-origin: top left;
-        transform: translate(80px, -20px) rotate(34deg);
+        transform: translate(5rem, -1.25rem) rotate(34deg);
       }
     }
 
@@ -114,11 +114,11 @@
 
       > * {
         background-color: var(--lighter);
-        height: 150px;
-        width: 100px;
+        height: 9.375rem;
+        width: 6.25rem;
         z-index: 11;
         transform-origin: top left;
-        transform: translate(10px, -20px) rotate(-34deg);
+        transform: translate(0.625rem, -1.25rem) rotate(-34deg);
       }
     }
   }
