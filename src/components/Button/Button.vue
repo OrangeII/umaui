@@ -38,7 +38,7 @@
 <script setup lang="ts">
 import styles from "./Button.module.scss";
 import ButtonClickDecoration from "../ButtonClickDecoration/ButtonClickDecoration.vue";
-import { useButtonClickDecoration } from "../ButtonClickDecoration/useButtonClickDecoration";
+import { useButtonClickDecoration } from "../ButtonClickDecoration/buttonClickDecoration";
 
 const { showDecoration, triggerDecoration } = useButtonClickDecoration();
 
