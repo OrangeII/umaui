@@ -1,11 +1,16 @@
 .rank {
+  --gradient-start: #eff0ef;
+  --gradient-end: #b2b1b2;
+  --stroke-gradient-start: #919090;
+  --stroke-gradient-end: #3f4040;
+
   padding-left: 0.063em;
   padding-right: 0.063em;
   font-size: 1em;
 
   font-family: "Fira Sans";
   font-style: normal;
-  font-weight: 900;
+  font-weight: 800;
   letter-spacing: 0.01em;
 
   -webkit-background-clip: text;
@@ -42,4 +47,18 @@
   --gradient-end: #fb8a3b;
   --stroke-gradient-start: #f06a12;
   --stroke-gradient-end: #a23b06;
+}
+
+.B {
+  --gradient-start: #ffd0dc;
+  --gradient-end: #d75b85;
+  --stroke-gradient-start: #fd8faa;
+  --stroke-gradient-end: #a22445;
+}
+
+.F {
+  --gradient-start: #e7e8fb;
+  --gradient-end: #ad97fd;
+  --stroke-gradient-start: #877fea;
+  --stroke-gradient-end: #52498d;
 }

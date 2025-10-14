@@ -72,3 +72,25 @@ export const SS: Story = {
     rank: "SS",
   },
 };
+
+const fontSizeTemplate = `
+  <span style="font-size: 150px;">
+    <Rank rank="F" />
+  </span>`;
+export const FontSize: Story = {
+  args: {
+    rank: "F",
+  },
+  parameters: {
+    docs: {
+      source: {
+        code: fontSizeTemplate,
+      },
+    },
+  },
+  render: (args) => ({
+    components: { Rank },
+    setup: () => ({ args }),
+    template: fontSizeTemplate,
+  }),
+};
