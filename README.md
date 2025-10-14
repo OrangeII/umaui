@@ -25,14 +25,5 @@ Vue libary to replicate UI from the popular videogame "Umamusume: Pretty Derby"
 - [ ] Badge
   - [ ] New
   - [ ] Exclamation
-- [ ] Rank
-  - [x] A
-  - [x] B
-  - [ ] C
-  - [ ] D
-  - [ ] E
-  - [x] F
-  - [x] G
-  - [ ] S
-  - [ ] SS
+- [x] Rank
   - [ ] Plus
