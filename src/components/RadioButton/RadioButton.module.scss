@@ -1,0 +1,66 @@
+.container {
+  --radio-inner-border: #b8b4c0;
+  --radio-outer-border: #b8b4c0;
+  --outer-gradient-start: #ffffff;
+  --outer-gradient-end: #b9b5c1;
+  --inner-gradient-start: #dbdade;
+  --inner-gradient-end: #d6d5da;
+  --color: #794016;
+
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+
+  font-weight: 600;
+  font-size: 1.25rem;
+  line-height: 1.5rem;
+
+  color: var(--color);
+}
+
+.input {
+  position: absolute;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.control {
+  position: relative;
+  width: 2.625rem;
+  height: 2.625rem;
+  border: 0.125rem solid var(--radio-outer-border);
+  border-radius: 50%;
+  box-sizing: border-box;
+  flex-shrink: 0;
+  background-image: linear-gradient(
+    180deg,
+    var(--outer-gradient-start) 60%,
+    var(--outer-gradient-end) 100%
+  );
+
+  box-shadow: 0rem 0.063rem 0.063rem rgba(0, 0, 0, 0.25);
+}
+
+.control::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 1.75rem;
+  height: 1.75rem;
+  border: 0.125rem solid var(--radio-inner-border);
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  box-sizing: border-box;
+  background-image: linear-gradient(
+    180deg,
+    var(--inner-gradient-start) 60%,
+    var(--inner-gradient-end) 100%
+  );
+}
+
+.input:checked + .control::after {
+  --radio-inner-border: #6bb629;
+  --inner-gradient-start: #b7e430;
+  --inner-gradient-end: #70bf23;
+}
