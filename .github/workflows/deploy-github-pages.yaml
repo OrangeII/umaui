@@ -5,6 +5,12 @@ on:
   push:
     branches:
       - "main" # change to the branch you wish to deploy from
+    paths:
+      - "src/**"
+      - ".storybook/**"
+      - "package.json"
+      - "tsconfig.json"
+      - "vite.config.ts"
 
 permissions:
   contents: read
