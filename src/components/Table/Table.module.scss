@@ -4,7 +4,7 @@
   --header-background-color: #79d823;
   --header-color: #ffffff;
   --text-color: #794016;
-  --separator-color: rgba(0, 0, 0, 0.05);
+  --separator: 0.125rem solid rgba(0, 0, 0, 0.05);
 
   border-collapse: separate;
   border-spacing: 0;
@@ -39,6 +39,10 @@
   }
 }
 
+.dashed {
+  --separator: 0.125rem dashed var(--border-color);
+}
+
 .vertical {
   th {
     box-shadow: 0rem 0.063rem 0.063rem rgba(0, 0, 0, 0.25);
@@ -46,7 +50,7 @@
 
   th,
   td {
-    border-right: 0.125rem solid var(--separator-color);
+    border-right: var(--separator);
   }
 
   td:last-child,
@@ -57,7 +61,7 @@
 .horizontal {
   th,
   td {
-    border-bottom: 0.125rem solid var(--separator-color);
+    border-bottom: var(--separator);
   }
 
   tr:last-child {

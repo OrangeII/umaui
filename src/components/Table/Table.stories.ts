@@ -19,41 +19,44 @@ type Story = StoryObj<typeof meta>;
  * to learn how to use render functions.
  */
 
-const verticalTemplate = `
-  <Table orientation="vertical">
-    <thead>
-      <tr>
-        <th>🥾 Speed</th>
-        <th>🧡 Stamina</th>
-        <th>💪 Power</th>
-        <th>🔥 Guts</th>
-        <th>🎓 Wit</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>F</td>
-        <td>D</td>
-        <td>C</td>
-        <td>B</td>
-        <td>A</td>
-      </tr>
-    </tbody>
-  </Table>`;
+const verticalSlotTemplate = `
+  <thead>
+    <tr>
+      <th>🥾 Speed</th>
+      <th>🧡 Stamina</th>
+      <th>💪 Power</th>
+      <th>🔥 Guts</th>
+      <th>🎓 Wit</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>F</td>
+      <td>D</td>
+      <td>C</td>
+      <td>B</td>
+      <td>A</td>
+    </tr>
+  </tbody>`.trim();
 
 export const Vertical: Story = {
   args: {},
   parameters: {
     docs: {
       source: {
-        code: verticalTemplate,
+        code: `<Table orientation="vertical">
+  ${verticalSlotTemplate}
+</Table>`,
       },
     },
   },
   render: (args) => ({
     components: { Table },
     setup: () => ({ args }),
-    template: verticalTemplate,
+    template: `
+      <Table v-bind="args">
+        ${verticalSlotTemplate}
+      </Table>`,
   }),
 };
 
@@ -80,7 +83,7 @@ const horizontalTemplate = `
       <td>Late F</td>
       <td>End G</td>
     </tr>
-  </Table>`;
+  </Table>`.trim();
 export const Horizontal: Story = {
   args: {},
   parameters: {
