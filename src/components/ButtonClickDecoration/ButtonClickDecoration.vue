@@ -19,7 +19,6 @@
 </template>
 
 <script setup lang="ts">
-import { defineModel } from "vue";
 import styles from "./ButtonClickDecoration.module.scss";
 import ButtonClickDecorationSparkle from "./ButtonClickDecorationSparkle.vue";
 
