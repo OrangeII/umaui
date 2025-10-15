@@ -1,0 +1,65 @@
+.plus {
+  transform: translate(-65%, -100%);
+
+  --fill-start: #eff0ef;
+  --fill-end: #b2b1b2;
+  --stroke-start: #919090;
+  --stroke-end: #3f4040;
+
+  &.A {
+    --fill-start: #ffe4b2;
+    --fill-end: #fb8a3b;
+    --stroke-start: #f06a12;
+    --stroke-end: #a23b06;
+  }
+
+  &.B {
+    --fill-start: #ffd0dc;
+    --fill-end: #d75b85;
+    --stroke-start: #fd8faa;
+    --stroke-end: #a22445;
+  }
+
+  &.C {
+    --fill-start: #e3feca;
+    --fill-end: #67bc51;
+    --stroke-start: #68d34c;
+    --stroke-end: #2a6319;
+  }
+
+  &.D {
+    --fill-start: #d6f3ff;
+    --fill-end: #6bbeff;
+    --stroke-start: #6dcff9;
+    --stroke-end: #145b8d;
+  }
+
+  &.E {
+    --fill-start: #f9e2fe;
+    --fill-end: #d377ef;
+    --stroke-start: #d777f4;
+    --stroke-end: #83309c;
+  }
+
+  &.F {
+    --fill-start: #e7e8fb;
+    --fill-end: #ad97fd;
+    --stroke-start: #877fea;
+    --stroke-end: #52498d;
+  }
+
+  &.G {
+    --fill-start: #eff0ef;
+    --fill-end: #b2b1b2;
+    --stroke-start: #919090;
+    --stroke-end: #3f4040;
+  }
+
+  &.S,
+  &.SS {
+    --fill-start: #fffbd6;
+    --fill-end: #efba21;
+    --stroke-start: #e2a94a;
+    --stroke-end: #946000;
+  }
+}

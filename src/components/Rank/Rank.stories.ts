@@ -7,7 +7,13 @@ const meta = {
   title: "Components/Rank",
   component: Rank,
   tags: ["autodocs"],
-  argTypes: {},
+  argTypes: {
+    rank: {
+      control: { type: "select" },
+      options: ["A", "B", "C", "D", "E", "F", "G", "S", "SS"],
+      defaultValue: "A",
+    },
+  },
   args: {},
 } satisfies Meta<typeof Rank>;
 
