@@ -5,3 +5,5 @@ export { default as Rank } from "./components/Rank/Rank.vue";
 export { default as Radio } from "./components/Radio/Radio.vue";
 export { default as Tabs } from "./components/Tabs/Tabs.vue";
 export { default as Input } from "./components/Input/Input.vue";
+export { default as Modal } from "./components/Modal/Modal.vue";
+export { useModal } from "./components/Modal/modal";

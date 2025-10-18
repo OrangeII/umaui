@@ -1,0 +1,49 @@
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+  backdrop-filter: blur(4px);
+
+  .container {
+    filter: drop-shadow(2px 4px 4px rgba(0, 0, 0, 0.25));
+    display: grid;
+    grid-template-rows: auto 1fr;
+
+    .title {
+      z-index: 1;
+      box-sizing: border-box;
+
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+
+      height: 3.188rem;
+
+      background: linear-gradient(180deg, #94d708 0%, #6dc30f 100%);
+      border-width: 0.125rem 0.125rem 0rem 0.125rem;
+      border-style: solid;
+      border-color: #94db18;
+      box-shadow: 0rem 0.125rem 0.125rem rgba(0, 0, 0, 0.25);
+      border-radius: 0.75rem 0.75rem 0rem 0rem;
+
+      font-weight: 600;
+      font-size: 1.5rem;
+      color: #ffffff;
+    }
+
+    .content {
+      background-color: #fafbfa;
+      padding: 1.625rem;
+      border: 0.125rem solid #ffffff;
+      border-radius: 0rem 0rem 0.75rem 0.75rem;
+    }
+  }
+}
