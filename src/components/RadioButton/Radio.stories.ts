@@ -1,15 +1,15 @@
 import type { Meta, StoryObj } from "@storybook/vue3-vite";
 
-import RadioButton from "./RadioButton.vue";
+import Radio from "./Radio.vue";
 
 // More on how to set up stories at: https://storybook.js.org/docs/writing-stories
 const meta = {
-  title: "Components/RadioButton",
-  component: RadioButton,
+  title: "Components/Radio",
+  component: Radio,
   tags: ["autodocs"],
   argTypes: {},
   args: {},
-} satisfies Meta<typeof RadioButton>;
+} satisfies Meta<typeof Radio>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
@@ -24,11 +24,11 @@ export const Normal: Story = {
     caption: "Standard",
   },
   render: (args) => ({
-    components: { RadioButton },
+    components: { Radio: Radio },
     setup() {
       return { args };
     },
     template:
-      '<RadioButton v-bind="args">Standard</RadioButton> <RadioButton v-bind="args">Basic</RadioButton>',
+      '<Radio v-bind="args">Standard</Radio> <Radio v-bind="args">Basic</Radio>',
   }),
 };

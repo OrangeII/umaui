@@ -15,7 +15,7 @@
 </template>
 
 <script setup lang="ts">
-import styles from "./RadioButton.module.scss";
+import styles from "./Radio.module.scss";
 
 const model = defineModel();
 
