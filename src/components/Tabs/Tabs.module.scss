@@ -1,0 +1,54 @@
+.button-group {
+  --text-color: #794016;
+  --bg-gradient-start: #ffffff;
+  --bg-gradient-end: #e7e7ef;
+  --border-color: #a7aaad;
+
+  display: flex;
+  list-style: none;
+  padding: 0;
+  overflow: hidden;
+
+  .button {
+    height: 2.125rem;
+    border: none;
+    background: linear-gradient(
+      180deg,
+      var(--bg-gradient-start) 0%,
+      var(--bg-gradient-end) 100%
+    );
+    color: var(--text-color);
+    text-align: center;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 500;
+    flex-grow: 1;
+
+    border: 0.125rem solid var(--border-color);
+    border-left: none;
+    border-radius: 0;
+
+    &:first-child {
+      border-top-left-radius: 1.563rem;
+      border-bottom-left-radius: 1.563rem;
+      border-left: 0.125rem solid var(--border-color);
+    }
+
+    &:last-child {
+      border-top-right-radius: 1.563rem;
+      border-bottom-right-radius: 1.563rem;
+    }
+
+    &.active {
+      --text-color: #ffffff;
+      --bg-gradient-start: #a5df08;
+      --bg-gradient-end: #63ba10;
+      --border-color: #498a08;
+      border-left: 0.125rem solid var(--border-color);
+    }
+
+    &:has(+ .button.active) {
+      border-right: none;
+    }
+  }
+}

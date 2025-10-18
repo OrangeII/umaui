@@ -3,3 +3,4 @@ export { default as DialogChoice } from "./components/DialogChoice/DialogChoice.
 export { default as Table } from "./components/Table/Table.vue";
 export { default as Rank } from "./components/Rank/Rank.vue";
 export { default as Radio } from "./components/Radio/Radio.vue";
+export { default as Tabs } from "./components/Tabs/Tabs.vue";
