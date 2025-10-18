@@ -27,3 +27,11 @@ Vue libary to replicate UI from the popular videogame "Umamusume: Pretty Derby"
   - [ ] Exclamation
   - [ ] Cleat
 - [x] Rank
+
+## Developement
+
+To create boilerplate for a new component run
+
+```bash
+npm run gc ComponentName
+```
