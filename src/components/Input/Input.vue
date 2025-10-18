@@ -3,7 +3,7 @@
 </template>
 
 <script setup lang="ts">
-import styles from "./Input.module.css";
+import styles from "./Input.module.scss";
 
 const value = defineModel();
 
