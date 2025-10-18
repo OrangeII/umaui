@@ -20,7 +20,7 @@ type Story = StoryObj<typeof meta>;
  * to learn how to use render functions.
  */
 
-export const Normal: Story = {
+export const Default: Story = {
   args: {
     items: [
       { label: "Skills", value: "skills" },
