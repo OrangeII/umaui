@@ -50,7 +50,7 @@ function main() {
 </template>
 
 <script setup lang="ts">
-import styles from './${pascal}.module.css';
+import styles from './${pascal}.module.scss';
 
 interface ${pascal}Props {}
 const props = withDefaults(defineProps<${pascal}Props>(), {});
