@@ -2,7 +2,9 @@ import type { Meta, StoryObj } from "@storybook/vue3-vite";
 
 import Rank from "./Rank.vue";
 
-// More on how to set up stories at: https://storybook.js.org/docs/writing-stories
+const ranks = ["A", "B", "C", "D", "E", "F", "G", "S", "SS"] as const;
+type RankType = (typeof ranks)[number];
+
 const meta = {
   title: "Components/Rank",
   component: Rank,
@@ -10,7 +12,7 @@ const meta = {
   argTypes: {
     rank: {
       control: { type: "select" },
-      options: ["A", "B", "C", "D", "E", "F", "G", "S", "SS"],
+      options: ranks,
       defaultValue: "A",
     },
   },
@@ -25,56 +27,22 @@ type Story = StoryObj<typeof meta>;
  * to learn how to use render functions.
  */
 
-export const A: Story = {
-  args: {
-    rank: "A",
-  },
-};
-
-export const B: Story = {
-  args: {
-    rank: "B",
-  },
-};
-
-export const C: Story = {
-  args: {
-    rank: "C",
-  },
-};
-
-export const D: Story = {
-  args: {
-    rank: "D",
-  },
-};
-
-export const E: Story = {
-  args: {
-    rank: "E",
-  },
-};
-
-export const F: Story = {
-  args: {
-    rank: "F",
-  },
-};
-
-export const G: Story = {
-  args: {
-    rank: "G",
-  },
-};
-
-export const S: Story = {
-  args: {
-    rank: "S",
-  },
-};
-
-export const SS: Story = {
-  args: {
-    rank: "SS",
-  },
-};
+const make = (rank: RankType): Story => ({
+  args: { rank },
+  render: (args) => ({
+    components: { Rank },
+    setup() {
+      return { args };
+    },
+    template: '<Rank v-bind="args" />',
+  }),
+});
+export const A = make("A");
+export const B = make("B");
+export const C = make("C");
+export const D = make("D");
+export const E = make("E");
+export const F = make("F");
+export const G = make("G");
+export const S = make("S");
+export const SS = make("SS");
