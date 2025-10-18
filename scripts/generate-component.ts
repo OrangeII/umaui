@@ -41,7 +41,7 @@ function main() {
 
   // Files
   const vuePath = path.join(root, `${pascal}.vue`);
-  const cssPath = path.join(root, `${pascal}.module.css`);
+  const cssPath = path.join(root, `${pascal}.module.scss`);
   const storyPath = path.join(root, `${pascal}.stories.ts`);
 
   const vueContent = `\
