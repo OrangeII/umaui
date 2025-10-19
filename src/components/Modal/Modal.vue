@@ -1,11 +1,11 @@
 <template>
   <Teleport to="body">
     <Transition name="focus">
-      <div v-if="open" :class="styles.backdrop"></div>
+      <div v-if="delayedOpen" :class="styles.backdrop"></div>
     </Transition>
     <Transition name="show-modal">
       <div
-        v-if="open"
+        v-if="delayedOpen"
         :class="styles.modal"
         @click.self="props.closeOnClickOutside ? closeModal() : null"
       >
@@ -28,7 +28,7 @@
 </template>
 
 <script setup lang="ts">
-import { nextTick, watch } from "vue";
+import { nextTick, watch, ref } from "vue";
 import styles from "./Modal.module.scss";
 
 const open = defineModel<boolean>();
@@ -43,14 +43,20 @@ const props = withDefaults(defineProps<ModalProps>(), {
   closeOnClickOutside: true,
 });
 
+const delayedOpen = ref(open.value);
+
 watch(
   () => open.value,
   async (newVal) => {
     if (newVal) {
+      delayedOpen.value = true;
       await nextTick();
       document.addEventListener("keydown", closeModalOnEscape);
     } else {
       document.removeEventListener("keydown", closeModalOnEscape);
+      setTimeout(() => {
+        delayedOpen.value = false;
+      }, 100);
     }
   },
   { flush: "post" }
