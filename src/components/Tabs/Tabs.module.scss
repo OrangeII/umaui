@@ -10,6 +10,10 @@
   overflow: hidden;
 
   .button {
+    flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 0;
+
     height: 2.125rem;
     border: none;
     background: linear-gradient(
@@ -22,7 +26,6 @@
     text-decoration: none;
     font-size: 1rem;
     font-weight: 500;
-    flex-grow: 1;
 
     border: 0.125rem solid var(--border-color);
     border-left: none;
