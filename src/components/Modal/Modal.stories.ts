@@ -18,6 +18,29 @@ export const Default: Story = {
     closeOnEscape: true,
     closeOnClickOutside: true,
   },
+  parameters: {
+    docs: {
+      source: {
+        code: `
+  <template>
+    <Button @click="openModal">Open Modal</Button>
+    <Modal v-bind="args" v-model="isOpen">        
+      <p>Modal Content</p>
+      <template #footer>
+        <Button @click="closeModal">Close Modal</Button>
+      </template>
+    </Modal>
+  </template>
+  
+  <script setup>
+  import { useModal } from "./modal";
+  
+  const { isOpen, openModal, closeModal } = useModal();
+  </script>
+        `,
+      },
+    },
+  },
   render: (args) => ({
     components: { Modal, Button },
     setup() {
