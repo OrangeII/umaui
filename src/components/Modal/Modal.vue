@@ -94,7 +94,7 @@ function closeModal() {
 }
 
 .focus-leave-active {
-  animation: hide-modal 0.1s linear 1;
+  animation: focus 0.1s linear 1;
   animation-delay: 0.05s;
 }
 @keyframes focus {
