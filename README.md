@@ -16,7 +16,7 @@ Vue libary to replicate UI from the popular videogame "Umamusume: Pretty Derby"
 - [ ] Card
 - [ ] SpeechBubble
 - [ ] Heading
-- [ ] Modal
+- [x] Modal
 - [ ] Input
 - [x] Tabs
 - [ ] Checkbox
