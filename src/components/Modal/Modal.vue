@@ -16,6 +16,11 @@
               <slot></slot>
             </Transition>
           </div>
+          <div v-if="$slots.footer" :class="styles.footer">
+            <Transition name="footer" appear>
+              <slot name="footer"></slot>
+            </Transition>
+          </div>
         </div>
       </div>
     </Transition>
@@ -65,11 +70,11 @@ function closeModal() {
 
 <style scoped>
 .show-modal-enter-active {
-  animation: show-modal 0.1s linear 1;
+  animation: show-modal 0.05s linear 1;
 }
 @keyframes show-modal {
   0% {
-    transform: scale(1.05);
+    transform: scale(1.1);
   }
   100% {
     transform: scale(1);
@@ -77,7 +82,7 @@ function closeModal() {
 }
 
 .show-modal-leave-active {
-  animation: hide-modal 0.15s cubic-bezier(0.55, 0.055, 0.675, 0.19) 1;
+  animation: hide-modal 0.1s cubic-bezier(0.55, 0.055, 0.675, 0.19) 1;
 }
 @keyframes hide-modal {
   0% {
@@ -107,7 +112,7 @@ function closeModal() {
 }
 
 .content-enter-active {
-  animation: show-content 0.15s linear 1;
+  animation: show-content 0.1s linear 1;
 }
 @keyframes show-content {
   0% {
@@ -115,6 +120,20 @@ function closeModal() {
   }
   100% {
     opacity: 1;
+  }
+}
+
+.footer-enter-active {
+  animation: bounce 0.1s cubic-bezier(0.47, 0, 0.745, 0.715) 1;
+  animation-delay: 0.05s;
+  transform: translateY(-7px);
+}
+@keyframes bounce {
+  0% {
+    transform: translateY(-7px);
+  }
+  100% {
+    transform: translateY(0);
   }
 }
 </style>

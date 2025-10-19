@@ -26,8 +26,11 @@ export const Default: Story = {
     },
     template: `
       <Button @click="openModal">Open Modal</Button>
-      <Modal v-bind="args" v-model="isOpen">
-        <Button @click="closeModal">Close Modal</Button>
+      <Modal v-bind="args" v-model="isOpen">        
+        <p>Modal Content</p>
+        <template #footer>
+          <Button @click="closeModal">Close Modal</Button>
+        </template>
       </Modal>`,
   }),
 };

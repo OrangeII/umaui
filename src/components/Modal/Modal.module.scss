@@ -52,6 +52,25 @@
       background-color: #fafbfa;
       padding: 1.625rem;
       border: 0.125rem solid #ffffff;
+      border-top: 0rem;
+      border-radius: 0rem 0rem 0.75rem 0.75rem;
+
+      &:has(+ .footer) {
+        border: 0rem;
+        border-radius: 0rem 0rem 0rem 0rem;
+        padding-bottom: 0.813rem;
+      }
+
+      & + .footer {
+        padding-top: 0.813rem;
+      }
+    }
+
+    .footer {
+      background-color: #fafbfa;
+      padding: 1.625rem;
+      border: 0.125rem solid #ffffff;
+      border-top: 0rem;
       border-radius: 0rem 0rem 0.75rem 0.75rem;
     }
   }
