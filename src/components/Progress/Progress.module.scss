@@ -3,7 +3,8 @@
   --border-color: #757a6c;
   --shadow-top: #c2c3c2;
   --shadow-bottom: #a0a1a0;
-  --inner-border: #9ab74b;
+  --value-border: #9ab74b;
+  --value-color: #bdeb3c;
 
   height: 0.5rem;
   border: 0.063rem solid var(--border-color);
@@ -13,11 +14,11 @@
   overflow: hidden;
 
   &::-webkit-progress-value {
-    background-color: #bdeb3c;
-    border-right: 0.063rem solid var(--inner-border);
+    background-color: var(--value-color);
+    border-right: 0.063rem solid var(--value-border);
   }
   &::-moz-progress-bar {
-    background-color: #bdeb3c;
-    border-right: 0.063rem solid var(--inner-border);
+    background-color: var(--value-color);
+    border-right: 0.063rem solid var(--value-border);
   }
 }
