@@ -76,11 +76,16 @@ function closeModal() {
 
 <style scoped>
 .show-modal-enter-active {
-  animation: show-modal 0.05s linear 1;
+  animation: show-modal 0.1s linear 1;
 }
 @keyframes show-modal {
   0% {
-    transform: scale(1.1);
+    transform: scale(0.8);
+    animation-timing-function: cubic-bezier(0.33333, 0.66667, 0.66667, 1);
+  }
+  50% {
+    transform: scale(1.05);
+    animation-timing-function: cubic-bezier(0.33333, 0, 0.66667, 0.33333);
   }
   100% {
     transform: scale(1);
@@ -131,7 +136,7 @@ function closeModal() {
 
 .footer-enter-active {
   animation: bounce 0.1s cubic-bezier(0.47, 0, 0.745, 0.715) 1;
-  animation-delay: 0.05s;
+  animation-delay: 0.08s;
   transform: translateY(-7px);
 }
 @keyframes bounce {
