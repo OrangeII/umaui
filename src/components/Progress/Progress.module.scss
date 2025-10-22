@@ -1,0 +1,23 @@
+.progress {
+  --bg-color: #636563;
+  --border-color: #757a6c;
+  --shadow-top: #c2c3c2;
+  --shadow-bottom: #a0a1a0;
+  --inner-border: #9ab74b;
+
+  height: 0.5rem;
+  border: 0.063rem solid var(--border-color);
+  border-radius: 0.938rem;
+  background-color: var(--bg-color);
+  box-shadow: 0px -1px 0px var(--shadow-top), 0px 1px 0px var(--shadow-bottom);
+  overflow: hidden;
+
+  &::-webkit-progress-value {
+    background-color: #bdeb3c;
+    border-right: 0.063rem solid var(--inner-border);
+  }
+  &::-moz-progress-bar {
+    background-color: #bdeb3c;
+    border-right: 0.063rem solid var(--inner-border);
+  }
+}

@@ -29,8 +29,8 @@ Vue libary to replicate UI from the popular videogame "Umamusume: Pretty Derby"
   - [ ] Cleat
 - [x] Rank
 - [x] Image
-- [ ] Heading
-- [ ] Progress
+- [x] Heading
+- [x] Progress
 
 ## Developement
 
