@@ -7,3 +7,4 @@ export { default as Tabs } from "./components/Tabs/Tabs.vue";
 export { default as Input } from "./components/Input/Input.vue";
 export { default as Modal } from "./components/Modal/Modal.vue";
 export { useModal } from "./components/Modal/modal";
+export { default as Heading } from "./components/Heading/Heading.vue";
