@@ -37,13 +37,15 @@ export default defineConfig({
       // into your library
       external: ["vue"],
       input: Object.fromEntries(
-        globSync("src/**/*.{ts,vue}").map((file) => [
-          relative(
-            "src",
-            file.slice(0, file.length - path.extname(file).length)
-          ),
-          fileURLToPath(new URL(file, import.meta.url)),
-        ])
+        globSync("src/**/*.{ts,vue}")
+          .filter((file) => !file.includes(".stories.ts"))
+          .map((file) => [
+            relative(
+              "src",
+              file.slice(0, file.length - path.extname(file).length)
+            ),
+            fileURLToPath(new URL(file, import.meta.url)),
+          ])
       ),
       output: {
         globals: {
