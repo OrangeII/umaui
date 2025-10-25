@@ -7,6 +7,7 @@
   --value-color: #bdeb3c;
 
   height: 0.5rem;
+  width: 100%;
   border: 0.063rem solid var(--border-color);
   border-radius: 0.938rem;
   background-color: var(--bg-color);
@@ -21,4 +22,14 @@
     background-color: var(--value-color);
     border-right: 0.063rem solid var(--value-border);
   }
+}
+
+.progress-text {
+  --text-color: #794016;
+  width: 100%;
+  margin-top: 0.5rem;
+  font-size: 1.188rem;
+  font-weight: 600;
+  color: var(--text-color);
+  text-align: center;
 }

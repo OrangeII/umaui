@@ -1,10 +1,10 @@
 <template>
-  <progress
-    :class="styles.progress"
-    :value="props.value"
-    :min="props.min"
-    :max="props.max"
-  ></progress>
+  <div>
+    <progress :class="styles.progress" v-bind="props"></progress>
+    <div v-if="showProgressText" :class="styles['progress-text']">
+      {{ props.value }}/{{ props.max }}
+    </div>
+  </div>
 </template>
 
 <script setup lang="ts">

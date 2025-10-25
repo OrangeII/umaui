@@ -13,8 +13,9 @@ type Story = StoryObj<typeof Progress>;
 export const Default: Story = {
   args: {
     min: 0,
-    max: 100,
-    value: 50,
+    max: 40,
+    value: 35,
+    showProgressText: false,
   },
   render: (args) => ({
     components: { Progress },
