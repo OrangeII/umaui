@@ -5,7 +5,7 @@
   >
     <span :class="styles.overlay"></span>
     <span :class="styles.inner">
-      <Cleat width="25" :class="styles.icon" />
+      <Cleat width="1.562rem" :class="styles.icon" />
 
       <span :class="styles.text">
         <slot>
