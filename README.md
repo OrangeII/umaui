@@ -34,6 +34,12 @@ Vue libary to replicate UI from the popular videogame "Umamusume: Pretty Derby"
 
 ## Developement
 
+Run storybook dev server
+
+```bash
+npm run storybook
+```
+
 To create boilerplate for a new component run
 
 ```bash
